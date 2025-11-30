@@ -4,12 +4,12 @@ import { Label } from '@/components/ui/label'
 import { Switch } from '@/components/ui/switch'
 import { Bell, Globe, Moon, Shield, Mail } from 'lucide-react'
 
-export default function SettingsPage() {
+export default function ContactPage() {
   return (
     <div className="container mx-auto p-6 space-y-6 max-w-4xl">
       <div>
-        <h1 className="text-3xl font-bold">Ayarlar</h1>
-        <p className="text-muted-foreground">Hesap ve uygulama ayarlarını yönet</p>
+        <h1 className="text-3xl font-bold">İletişim</h1>
+        <p className="text-muted-foreground">İletişim bilgilerini görüntüle ve düzenle</p>
       </div>
 
       {/* Notification Settings */}
@@ -30,7 +30,7 @@ export default function SettingsPage() {
               </p>
             </div>
             <Switch id="email-notifications" />
-            {/* TODO: Logic will be added here */}
+            {/* TODO: E-posta bildirim ayarını kaydetme - handleEmailNotificationsChange, API çağrısı */}
           </div>
           <div className="flex items-center justify-between">
             <div className="space-y-0.5">
@@ -40,7 +40,7 @@ export default function SettingsPage() {
               </p>
             </div>
             <Switch id="push-notifications" />
-            {/* TODO: Logic will be added here */}
+            {/* TODO: Anlık bildirim ayarını kaydetme - handlePushNotificationsChange, tarayıcı bildirim izni */}
           </div>
           <div className="flex items-center justify-between">
             <div className="space-y-0.5">
@@ -50,7 +50,7 @@ export default function SettingsPage() {
               </p>
             </div>
             <Switch id="task-reminders" />
-            {/* TODO: Logic will be added here */}
+            {/* TODO: Görev hatırlatıcı ayarını kaydetme - handleTaskRemindersChange */}
           </div>
         </CardContent>
       </Card>
@@ -71,7 +71,7 @@ export default function SettingsPage() {
               className="w-full h-10 rounded-md border border-input bg-background px-3 py-2 text-sm disabled:cursor-not-allowed disabled:opacity-50"
               disabled
             >
-              {/* TODO: Logic will be added here */}
+              {/* TODO: Tema değiştirme fonksiyonu - handleThemeChange, localStorage kaydı, dark mode toggle */}
               <option>Açık</option>
               <option>Koyu</option>
               <option>Sistem</option>
@@ -83,7 +83,7 @@ export default function SettingsPage() {
               className="w-full h-10 rounded-md border border-input bg-background px-3 py-2 text-sm disabled:cursor-not-allowed disabled:opacity-50"
               disabled
             >
-              {/* TODO: Logic will be added here */}
+              {/* TODO: Dil değiştirme fonksiyonu - handleLanguageChange, i18n entegrasyonu */}
               <option>Türkçe</option>
               <option>English</option>
             </select>
@@ -109,7 +109,7 @@ export default function SettingsPage() {
               </p>
             </div>
             <Switch id="profile-visibility" />
-            {/* TODO: Logic will be added here */}
+            {/* TODO: Profil görünürlüğü ayarını kaydetme - handleProfileVisibilityChange */}
           </div>
           <div className="flex items-center justify-between">
             <div className="space-y-0.5">
@@ -119,7 +119,7 @@ export default function SettingsPage() {
               </p>
             </div>
             <Switch id="activity-tracking" />
-            {/* TODO: Logic will be added here */}
+            {/* TODO: Aktivite takibi ayarını kaydetme - handleActivityTrackingChange */}
           </div>
         </CardContent>
       </Card>
@@ -140,7 +140,7 @@ export default function SettingsPage() {
               className="w-full h-10 rounded-md border border-input bg-background px-3 py-2 text-sm disabled:cursor-not-allowed disabled:opacity-50"
               disabled
             >
-              {/* TODO: Logic will be added here */}
+              {/* TODO: E-posta sıklığı ayarını kaydetme - handleEmailFrequencyChange */}
               <option>Anında</option>
               <option>Günlük Özet</option>
               <option>Haftalık Özet</option>
@@ -154,7 +154,7 @@ export default function SettingsPage() {
               </p>
             </div>
             <Switch id="marketing-emails" />
-            {/* TODO: Logic will be added here */}
+            {/* TODO: Pazarlama e-postaları ayarını kaydetme - handleMarketingEmailsChange */}
           </div>
         </CardContent>
       </Card>
@@ -174,7 +174,7 @@ export default function SettingsPage() {
               </p>
             </div>
             <Button variant="destructive">
-              {/* TODO: Logic will be added here */}
+              {/* TODO: Hesap silme fonksiyonu - handleDeleteAccount, onay dialog'u, API çağrısı */}
               Hesabı Sil
             </Button>
           </div>

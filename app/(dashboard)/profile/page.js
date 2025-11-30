@@ -29,12 +29,12 @@ export default function ProfilePage() {
                   variant="outline"
                   className="absolute bottom-0 right-0 rounded-full"
                 >
-                  {/* TODO: Logic will be added here */}
+                  {/* TODO: Profil fotoğrafı düzenleme fonksiyonu - handleEditProfilePhoto */}
                   <Camera className="h-4 w-4" />
                 </Button>
               </div>
               <Button variant="outline" className="w-full">
-                {/* TODO: Logic will be added here */}
+                {/* TODO: Fotoğraf yükleme fonksiyonu - handleUploadPhoto, file input açma */}
                 Fotoğraf Yükle
               </Button>
             </div>
@@ -55,7 +55,7 @@ export default function ProfilePage() {
                   type="text"
                   placeholder="Adınız"
                 />
-                {/* TODO: Logic will be added here */}
+                {/* TODO: Kullanıcı adını çekme ve güncelleme - getUserProfile, handleFirstNameChange */}
               </div>
               <div className="space-y-2">
                 <Label htmlFor="lastName">Soyad</Label>
@@ -64,7 +64,7 @@ export default function ProfilePage() {
                   type="text"
                   placeholder="Soyadınız"
                 />
-                {/* TODO: Logic will be added here */}
+                {/* TODO: Kullanıcı soyadını çekme ve güncelleme - handleLastNameChange */}
               </div>
             </div>
             <div className="space-y-2">
@@ -74,7 +74,7 @@ export default function ProfilePage() {
                 type="email"
                 placeholder="ornek@email.com"
               />
-              {/* TODO: Logic will be added here */}
+              {/* TODO: E-posta çekme ve güncelleme - handleEmailChange, email validasyonu */}
             </div>
             <div className="space-y-2">
               <Label htmlFor="phone">Telefon</Label>
@@ -83,7 +83,7 @@ export default function ProfilePage() {
                 type="tel"
                 placeholder="+90 555 123 45 67"
               />
-              {/* TODO: Logic will be added here */}
+              {/* TODO: Telefon çekme ve güncelleme - handlePhoneChange, telefon formatı */}
             </div>
             <div className="space-y-2">
               <Label htmlFor="bio">Hakkımda</Label>
@@ -93,16 +93,16 @@ export default function ProfilePage() {
                 placeholder="Kendiniz hakkında bir şeyler yazın..."
                 disabled
               >
-                {/* TODO: Logic will be added here */}
+                {/* TODO: Bio çekme ve güncelleme - handleBioChange, karakter limiti kontrolü */}
               </textarea>
             </div>
             <div className="flex justify-end gap-2">
               <Button variant="outline">
-                {/* TODO: Logic will be added here */}
+                {/* TODO: Değişiklikleri iptal etme fonksiyonu - handleCancel, form reset */}
                 İptal
               </Button>
               <Button>
-                {/* TODO: Logic will be added here */}
+                {/* TODO: Profil bilgilerini kaydetme fonksiyonu - handleSaveProfile, API çağrısı */}
                 <Save className="mr-2 h-4 w-4" />
                 Kaydet
               </Button>
@@ -124,7 +124,7 @@ export default function ProfilePage() {
               type="password"
               placeholder="••••••••"
             />
-            {/* TODO: Logic will be added here */}
+            {/* TODO: Mevcut şifre kontrolü - handleCurrentPasswordChange */}
           </div>
           <div className="space-y-2">
             <Label htmlFor="newPassword">Yeni Şifre</Label>
@@ -133,7 +133,7 @@ export default function ProfilePage() {
               type="password"
               placeholder="••••••••"
             />
-            {/* TODO: Logic will be added here */}
+            {/* TODO: Yeni şifre validasyonu - handleNewPasswordChange, şifre güçlülüğü kontrolü */}
           </div>
           <div className="space-y-2">
             <Label htmlFor="confirmPassword">Yeni Şifre Tekrar</Label>
@@ -142,15 +142,15 @@ export default function ProfilePage() {
               type="password"
               placeholder="••••••••"
             />
-            {/* TODO: Logic will be added here */}
+            {/* TODO: Şifre eşleşme kontrolü - handleConfirmPasswordChange, şifre karşılaştırma */}
           </div>
           <div className="flex justify-end gap-2">
             <Button variant="outline">
-              {/* TODO: Logic will be added here */}
+              {/* TODO: Şifre değişikliğini iptal etme - handleCancelPasswordChange */}
               İptal
             </Button>
             <Button>
-              {/* TODO: Logic will be added here */}
+              {/* TODO: Şifre güncelleme fonksiyonu - handleUpdatePassword, API çağrısı */}
               Şifreyi Güncelle
             </Button>
           </div>

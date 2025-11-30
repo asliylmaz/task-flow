@@ -22,7 +22,7 @@ export default function RegisterPage() {
               type="text"
               placeholder="Adınız Soyadınız"
             />
-            {/* TODO: Logic will be added here */}
+            {/* TODO: İsim state yönetimi - name state, handleNameChange */}
           </div>
           <div className="space-y-2">
             <Label htmlFor="email">E-posta</Label>
@@ -31,7 +31,7 @@ export default function RegisterPage() {
               type="email"
               placeholder="ornek@email.com"
             />
-            {/* TODO: Logic will be added here */}
+            {/* TODO: E-posta state yönetimi ve validasyonu - email state, handleEmailChange, email format kontrolü */}
           </div>
           <div className="space-y-2">
             <Label htmlFor="password">Şifre</Label>
@@ -40,7 +40,7 @@ export default function RegisterPage() {
               type="password"
               placeholder="••••••••"
             />
-            {/* TODO: Logic will be added here */}
+            {/* TODO: Şifre state yönetimi ve validasyonu - password state, handlePasswordChange, şifre güçlülüğü kontrolü */}
           </div>
           <div className="space-y-2">
             <Label htmlFor="confirmPassword">Şifre Tekrar</Label>
@@ -49,7 +49,7 @@ export default function RegisterPage() {
               type="password"
               placeholder="••••••••"
             />
-            {/* TODO: Logic will be added here */}
+            {/* TODO: Şifre tekrar state yönetimi ve eşleşme kontrolü - confirmPassword state, handleConfirmPasswordChange, şifre karşılaştırma */}
           </div>
           <div className="flex items-center space-x-2">
             <input
@@ -58,7 +58,7 @@ export default function RegisterPage() {
               className="h-4 w-4 rounded border-gray-300"
               disabled
             />
-            {/* TODO: Logic will be added here */}
+            {/* TODO: Kullanım şartları checkbox state - termsAccepted state, handleTermsChange */}
             <Label htmlFor="terms" className="text-sm font-normal">
               <Link href="/terms" className="text-primary hover:underline">
                 Kullanım Şartları
@@ -67,7 +67,7 @@ export default function RegisterPage() {
             </Label>
           </div>
           <Button className="w-full" size="lg">
-            {/* TODO: Logic will be added here */}
+            {/* TODO: Kayıt olma fonksiyonu - handleRegister, form validasyonu, API çağrısı, otomatik giriş, yönlendirme */}
             Kayıt Ol
           </Button>
           <div className="text-center text-sm">

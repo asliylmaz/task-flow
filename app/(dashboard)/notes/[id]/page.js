@@ -12,7 +12,6 @@ export default function NoteDetailPage({ params }) {
       <div className="flex items-center gap-4">
         <Link href="/notes">
           <Button variant="ghost" size="icon">
-            {/* TODO: Logic will be added here */}
             <ArrowLeft className="h-5 w-5" />
           </Button>
         </Link>
@@ -27,21 +26,24 @@ export default function NoteDetailPage({ params }) {
           <div className="flex items-start justify-between">
             <div className="flex-1">
               <CardTitle className="text-2xl mb-2">Not Başlığı</CardTitle>
+              {/* TODO: Not başlığını çekme - fetchNoteById(params.id), note.title */}
               <div className="flex items-center gap-2 flex-wrap">
                 <Badge variant="secondary">Kategori</Badge>
+                {/* TODO: Kategori badge'i - note.category */}
                 <div className="flex items-center gap-2 text-sm text-muted-foreground">
                   <Calendar className="h-4 w-4" />
                   <span>15 Ocak 2024, 14:30</span>
+                  {/* TODO: Tarih formatlama - formatDateTime(note.createdAt) */}
                 </div>
               </div>
             </div>
             <div className="flex gap-2">
-              <Button variant="outline" size="icon">
-                {/* TODO: Logic will be added here */}
+                  <Button variant="outline" size="icon">
+                {/* TODO: Not düzenleme modunu açma - handleEditNote, setEditMode(true) */}
                 <Edit className="h-4 w-4" />
               </Button>
               <Button variant="outline" size="icon">
-                {/* TODO: Logic will be added here */}
+                {/* TODO: Not silme fonksiyonu - handleDeleteNote, onay dialog'u */}
                 <Trash2 className="h-4 w-4" />
               </Button>
             </div>
@@ -54,7 +56,7 @@ export default function NoteDetailPage({ params }) {
               className="mt-1"
               placeholder="Not başlığı"
             />
-            {/* TODO: Logic will be added here */}
+            {/* TODO: Başlık state yönetimi ve güncelleme - handleTitleChange, handleSaveNote */}
           </div>
           <div>
             <Label>Kategori</Label>
@@ -62,7 +64,7 @@ export default function NoteDetailPage({ params }) {
               className="w-full mt-1 h-10 rounded-md border border-input bg-background px-3 py-2 text-sm disabled:cursor-not-allowed disabled:opacity-50"
               disabled
             >
-              {/* TODO: Logic will be added here */}
+              {/* TODO: Kategori değiştirme fonksiyonu - handleCategoryChange, API çağrısı */}
               <option>Genel</option>
               <option>İş</option>
               <option>Kişisel</option>
@@ -75,7 +77,7 @@ export default function NoteDetailPage({ params }) {
               placeholder="Not içeriğinizi buraya yazın..."
               disabled
             >
-              {/* TODO: Logic will be added here */}
+              {/* TODO: İçerik state yönetimi ve güncelleme - handleContentChange, handleSaveNote, markdown desteği */}
               Bu notun içeriği buraya gelecek. Notlarınızı burada saklayabilir, düzenleyebilir ve organize edebilirsiniz. Bu örnek not içeriği gösterim amaçlıdır.
             </textarea>
           </div>

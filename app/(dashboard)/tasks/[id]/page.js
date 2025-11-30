@@ -12,7 +12,6 @@ export default function TaskDetailPage({ params }) {
       <div className="flex items-center gap-4">
         <Link href="/tasks">
           <Button variant="ghost" size="icon">
-            {/* TODO: Logic will be added here */}
             <ArrowLeft className="h-5 w-5" />
           </Button>
         </Link>
@@ -29,18 +28,21 @@ export default function TaskDetailPage({ params }) {
               <div className="flex items-start justify-between">
                 <div className="flex-1">
                   <CardTitle className="text-2xl mb-2">Örnek Görev Başlığı</CardTitle>
+                  {/* TODO: Görev başlığını çekme - fetchTaskById(params.id), task.title */}
                   <div className="flex items-center gap-2 flex-wrap">
                     <Badge variant="destructive">Yüksek Öncelik</Badge>
+                    {/* TODO: Öncelik badge'i - task.priority */}
                     <Badge variant="secondary">Devam Ediyor</Badge>
+                    {/* TODO: Durum badge'i - task.status */}
                   </div>
                 </div>
                 <div className="flex gap-2">
                   <Button variant="outline" size="icon">
-                    {/* TODO: Logic will be added here */}
+                    {/* TODO: Görev düzenleme modal açma - handleEditTask */}
                     <Edit className="h-4 w-4" />
                   </Button>
                   <Button variant="outline" size="icon">
-                    {/* TODO: Logic will be added here */}
+                    {/* TODO: Görev silme fonksiyonu - handleDeleteTask, onay dialog'u */}
                     <Trash2 className="h-4 w-4" />
                   </Button>
                 </div>
@@ -52,6 +54,7 @@ export default function TaskDetailPage({ params }) {
                 <p className="text-muted-foreground">
                   Bu görev için detaylı açıklama buraya gelecek. Görevin amacı, gereksinimleri ve diğer önemli bilgiler bu bölümde yer alacak.
                 </p>
+                {/* TODO: Görev açıklaması - task.description */}
               </div>
 
               <div className="space-y-4">
@@ -59,16 +62,19 @@ export default function TaskDetailPage({ params }) {
                   <Calendar className="h-4 w-4 text-muted-foreground" />
                   <span className="text-muted-foreground">Başlangıç:</span>
                   <span>10 Ocak 2024</span>
+                  {/* TODO: Başlangıç tarihi formatlama - formatDate(task.startDate) */}
                 </div>
                 <div className="flex items-center gap-3 text-sm">
                   <Clock className="h-4 w-4 text-muted-foreground" />
                   <span className="text-muted-foreground">Bitiş:</span>
                   <span>25 Ocak 2024</span>
+                  {/* TODO: Bitiş tarihi formatlama - formatDate(task.dueDate) */}
                 </div>
                 <div className="flex items-center gap-3 text-sm">
                   <User className="h-4 w-4 text-muted-foreground" />
                   <span className="text-muted-foreground">Atanan:</span>
                   <span>Kullanıcı Adı</span>
+                  {/* TODO: Atanan kullanıcı bilgisi - task.assignedTo */}
                 </div>
               </div>
 
@@ -79,6 +85,7 @@ export default function TaskDetailPage({ params }) {
                     <div className="h-full bg-primary transition-all" style={{ width: '45%' }} />
                   </div>
                   <span className="text-sm font-medium">%45</span>
+                  {/* TODO: İlerleme yüzdesi hesaplama - calculateProgress(task.progress) */}
                 </div>
               </div>
             </CardContent>
@@ -90,9 +97,12 @@ export default function TaskDetailPage({ params }) {
               <CardDescription>Bu görevle ilgili notlar</CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
+              {/* TODO: Görev notlarını çekme - fetchTaskNotes(taskId) */}
               <div className="border rounded-lg p-4">
                 <p className="text-sm">Görevle ilgili önemli bir not buraya yazılabilir.</p>
+                {/* TODO: Not içeriği - note.content */}
                 <p className="text-xs text-muted-foreground mt-2">2 gün önce eklendi</p>
+                {/* TODO: Not tarihi formatlama - formatDate(note.createdAt) */}
               </div>
             </CardContent>
           </Card>
@@ -110,7 +120,7 @@ export default function TaskDetailPage({ params }) {
                   className="w-full mt-1 h-10 rounded-md border border-input bg-background px-3 py-2 text-sm disabled:cursor-not-allowed disabled:opacity-50"
                   disabled
                 >
-                  {/* TODO: Logic will be added here */}
+                  {/* TODO: Durum değiştirme fonksiyonu - handleStatusChange, API çağrısı */}
                   <option>Beklemede</option>
                   <option>Devam Ediyor</option>
                   <option>Tamamlandı</option>
@@ -122,7 +132,7 @@ export default function TaskDetailPage({ params }) {
                   className="w-full mt-1 h-10 rounded-md border border-input bg-background px-3 py-2 text-sm disabled:cursor-not-allowed disabled:opacity-50"
                   disabled
                 >
-                  {/* TODO: Logic will be added here */}
+                  {/* TODO: Öncelik değiştirme fonksiyonu - handlePriorityChange, API çağrısı */}
                   <option>Düşük</option>
                   <option>Orta</option>
                   <option>Yüksek</option>
@@ -134,7 +144,7 @@ export default function TaskDetailPage({ params }) {
                   type="date"
                   className="mt-1"
                 />
-                {/* TODO: Logic will be added here */}
+                {/* TODO: Başlangıç tarihi değiştirme - handleStartDateChange, API çağrısı */}
               </div>
               <div>
                 <Label>Bitiş Tarihi</Label>
@@ -142,7 +152,7 @@ export default function TaskDetailPage({ params }) {
                   type="date"
                   className="mt-1"
                 />
-                {/* TODO: Logic will be added here */}
+                {/* TODO: Bitiş tarihi değiştirme - handleDueDateChange, API çağrısı */}
               </div>
             </CardContent>
           </Card>

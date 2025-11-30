@@ -22,7 +22,7 @@ export default function LoginPage() {
               type="email"
               placeholder="ornek@email.com"
             />
-            {/* TODO: Logic will be added here */}
+            {/* TODO: E-posta state yönetimi - email state, handleEmailChange */}
           </div>
           <div className="space-y-2">
             <div className="flex items-center justify-between">
@@ -36,7 +36,7 @@ export default function LoginPage() {
               type="password"
               placeholder="••••••••"
             />
-            {/* TODO: Logic will be added here */}
+            {/* TODO: Şifre state yönetimi - password state, handlePasswordChange */}
           </div>
           <div className="flex items-center space-x-2">
             <input
@@ -45,13 +45,13 @@ export default function LoginPage() {
               className="h-4 w-4 rounded border-gray-300"
               disabled
             />
-            {/* TODO: Logic will be added here */}
+            {/* TODO: Beni hatırla checkbox state - rememberMe state, handleRememberMeChange */}
             <Label htmlFor="remember" className="text-sm font-normal">
               Beni Hatırla
             </Label>
           </div>
           <Button className="w-full" size="lg">
-            {/* TODO: Logic will be added here */}
+            {/* TODO: Giriş yapma fonksiyonu - handleLogin, form validasyonu, API çağrısı, token kaydı, yönlendirme */}
             Giriş Yap
           </Button>
           <div className="relative">
